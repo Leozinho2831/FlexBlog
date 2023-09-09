@@ -1,0 +1,33 @@
+// variáveis
+
+$branco: #ffffff;
+$branco-bg: #f7f7f7;
+$preto: #000000;
+$cinza-claro: #a4a4a4;
+$cinza: #7c7c7c;
+$cinza-escuro: #222222;
+$azul-escuro: #122ab2;
+$azul: #2c70ff;
+
+$purple-card: #ae81ff;
+$pink-card: #f9265e;
+$blue-card: #66d9eb;
+
+$fonte: "Nunito", Helvetica, Arial, sans-serif;
+
+$space: 60px;
+$gap: 30px;
+
+// mixins
+
+@mixin responsive($responsive){
+    @if $responsive == ordem{
+        @media (max-width:1248px){
+            @content;
+        }
+    }@else if $responsive == tablet{
+        @media(max-width: 930px){
+            @content;
+        }
+    }
+}

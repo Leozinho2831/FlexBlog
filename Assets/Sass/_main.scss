@@ -1,0 +1,335 @@
+@import 'mixins-e-variáveis';
+
+.main{
+    
+    .title{
+        max-width: 960px;
+        padding: $space 20px;
+        margin: 0 auto;
+        border-bottom: 2px solid $azul;
+        
+        h1{
+            font-size: 3.5rem;
+            color: $cinza-escuro;
+            line-height: 1.2;
+        }
+    }
+    
+    .main__sobre{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-wrap: wrap;
+
+        max-width: 960px;
+        padding: $space 20px;
+        margin: 0 auto;
+        gap: $gap;
+
+        border-bottom: 2px solid $azul;
+
+        div{
+            flex: 2 1 200px;
+
+            h2{
+                font-size: 2.8rem;
+                color: $cinza-escuro;
+            }
+
+            p{ 
+                margin: 20px 0;
+
+                font-size: 1.3rem;
+                line-height: 1.4;
+                color: $cinza;
+            }
+        }
+
+        figure{
+            display: flex;
+            flex: 1 1 160px;
+            max-width: 100%;
+        }
+    }
+
+    .main__produtos{
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 60px 20px;
+
+        h2{
+            margin: 0 0 $space 0;
+            font-size: 2.8rem;
+            line-height: 1;
+            color: $cinza-escuro;
+        }
+
+        .produtos__cards{
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: $gap;
+
+            figure{
+                flex: 1 1 250px;
+
+                h3{
+                    padding: $space 20px;
+
+                    font-size: 2.4rem;
+                    background: $branco-bg;  
+                }
+                
+                &:nth-child(1){
+                    h3{
+                        border-top: 5px solid $purple-card;
+                    }        
+                }
+
+                &:nth-child(2){
+                    h3{
+                        border-top: 5px solid $pink-card;
+                    }        
+                }
+
+                &:nth-child(3){
+                    h3{
+                        border-top: 5px solid $blue-card;
+                    }        
+                }
+            }   
+        }
+    }
+
+    .main__price{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+
+        gap: $gap;
+        padding: $space;
+
+        background: $branco-bg;
+
+        div{
+            flex: 1 1 250px;
+            padding: 20px $space;
+            border: 5px solid $branco;
+
+            @include responsive(ordem){
+                &:nth-child(1){
+                    order: 3;
+                }
+
+                &:nth-child(2){
+                    order: 2;
+                }
+
+                &:nth-child(3){
+                    order: 1;
+                }
+            }
+
+            @include responsive(tablet){
+                padding: 20px;
+            }
+
+            h1{
+                font-size: 3.5rem;
+                color: $cinza-claro;
+                text-align: center;
+            }
+
+            span{
+                display: block;
+                max-width:300px;
+                padding: 20px 0;
+                margin: 0 auto;
+
+                border-top: 4px solid $branco;
+                border-bottom: 4px solid $branco;
+                color: $cinza-escuro;
+                text-align: center;
+                font: {
+                    size: 2.2rem;
+                    family: $fonte;
+                    weight: bold;
+                }
+            }
+
+            ul{
+                max-width: 300px;
+                padding: 20px 0;
+                margin: 0 auto;
+
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    font-style: italic;
+                    font-size: 1.5rem;
+                    line-height: 2;
+                    color: $cinza-claro;
+
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        width: 7px;
+                        height: 7px;
+                        
+
+                        border-radius: 100%;
+                        background: $azul;
+                    }
+                }
+            }
+
+            a{
+                display: block;
+                max-width: 300px;
+                padding: 20px;
+                margin: 0 auto;
+
+                border: 4px solid $cinza-escuro;
+
+                font: {
+                family: $fonte;
+                    size: 2.2rem; 
+                    weight: bold; 
+                }
+                text-align: center;
+                text-transform: uppercase;
+                color: $cinza-escuro;
+            }
+        }
+    }
+
+    .main__quality{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 960px;
+        padding: $space 20px;
+        margin: 0 auto;
+            
+        div{
+            flex: 1 1 280px;
+                
+            &:nth-child(3n + 1){
+                h2{
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                         width: 8px;
+                        height: 30px;
+                        margin: 0 15px 0 0;
+                            
+                        background: $purple-card;
+                     }
+                }
+            }
+                
+            &:nth-child(3n + 2){
+                h2{
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                        width: 8px;
+                        height: 30px;
+                        margin: 0 15px 0 0;
+                            
+                        background: $pink-card;
+                    }
+                }
+            }
+                
+            &:nth-child(3n){
+                h2{
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                        width: 8px;
+                        height: 30px;
+                        margin: 0 15px 0 0;
+
+                        background: $blue-card;
+                    }
+                }
+            }
+
+            h2{
+                margin: 15px 0;
+
+                font-size: 2.2rem;
+                color: $cinza-claro;
+            }
+
+            p{
+                font-size: 1.3rem;
+                color: $cinza;
+            }
+            
+        }
+    }
+
+    .bg__assinar{
+        background: $branco-bg;
+
+        .main__assinar{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 960px;
+            padding: $space 20px;
+            margin: 0 auto;
+            gap: $gap;
+
+            div{
+                flex: 1 1 200px;
+                    
+                h2{
+                    font-size: 2.8rem;
+                    line-height: 1;
+                    color: $cinza-claro;
+                }
+
+                p{
+                    font-size: 1.3rem;
+                    line-height: 1;
+                    color: $cinza;
+                }
+            }
+            
+            form{
+                display: flex;
+                flex-wrap: wrap;
+                flex: 2 1 260px;
+
+                input{
+                    flex: 1 1 260px;
+
+                    border: 4px solid $azul;
+                    padding: 15px;
+                    
+                    font-size: 1.3rem;
+                    font-style: italic;
+                }
+
+                button{
+                    flex: 1 1 260px;
+                    padding: 10px;
+
+                    border: 4px solid $azul;
+                    background: $azul;
+                    color: $branco;
+                    font: {
+                        family: $fonte;
+                        size: 2rem;
+                        weight: bold;
+                    }
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

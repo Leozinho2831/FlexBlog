@@ -1,0 +1,27 @@
+@import 'mixins-e-variáveis';
+
+@import 'header';
+@import 'main';
+@import 'footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $fonte;
+    background: $branco;
+
+    img{
+        max-width: 100%;
+    }
+}

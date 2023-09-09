@@ -1,0 +1,71 @@
+@import 'mixins-e-variáveis';
+
+.bg__contato{
+    width: 100%;
+    
+
+    background: $azul-escuro;
+
+    .contato{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        margin: 0 auto;
+        padding: 20px;
+        gap: 20px;
+        max-width: 960px;
+
+        p{
+            font-family: $fonte;
+            font-size: 1rem;
+            line-height: 1;
+            color: $branco;
+        }
+    }
+}
+
+.header{
+    background-color: $azul;
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        padding: 20px;
+        margin: 0 auto;
+        gap: $gap;
+        max-width: 960px;
+
+        a{
+            color: $branco;
+
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                color: $azul-escuro;
+            }
+
+            h1{
+                font-size: 2.1rem;
+                font-weight: bold;
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: $gap;
+
+            li{
+                a{
+                    font-size: 1.2rem;
+                    color: $branco;
+                }
+            }
+        }
+    }
+}
